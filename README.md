@@ -4,18 +4,20 @@
 This is a database developed in `SQLite` simulating a social media like LinkedIn! This database has 17 tables such that 5 of them are main tables and others are either `many-to-many relationships` or `multi-values` attributes. 
 The 5 main  tables are:
 <details>
-  <summary>Event</summary>
-  * EventID
-  * Title
-  * Duration
-  * Organizer
-  * EventDate
-  * Description
-  * No. participants
+<summary>Event</summary>
+  
+* EventID
+* Title
+* Duration
+* Organizer
+* EventDate
+* Description
+* No. participants
 </details>    
 
 <details> 
   <summary>Job</summary>
+  
   * JobID
   * Company name
   * Qualifications
@@ -28,6 +30,7 @@ The 5 main  tables are:
 
 <details> 
   <summary>Person</summary>
+  
   * PersonID
   * Gender
   * Name (first name + last name)
@@ -44,6 +47,7 @@ The 5 main  tables are:
 
 <details>
   <summary>Poll</summary>
+  
   * PollID
   * Question
   * Options
@@ -51,6 +55,7 @@ The 5 main  tables are:
 
 <details> 
   <summary>Post</summary>
+  
   * PostId
   * PostDate
   * Content
@@ -63,24 +68,28 @@ The 5 main  tables are:
 
 <details>
   <summary>Person_favorite</summary>
+  
   * PersonID (FK)
   * Favorite
 </details> 
 
 <details>
   <summary>Person_Signed_in_devices</summary>
+  
   * PersonID (FK)
   * DeviceMacAddress
 </details> 
 
 <details>
   <summary>Person_Skill</summary>
+  
   * PersonID (FK)
   * Skill
 </details> 
 
 <details>
   <summary>Poll_Option</summary>
+  
   * PollID (FK)
   * OptionID
   * Option
@@ -88,12 +97,14 @@ The 5 main  tables are:
 
 <details>
   <summary>Post_hashtags</summary>
+  
   * PostID (FK)
   * Hashtag
 </details> 
 
 <details>
   <summary>To_apply</summary>
+  
   * PersonID (FK)
   * JobID (FK)
   * ApplyID
@@ -102,6 +113,7 @@ The 5 main  tables are:
 
 <details>
   <summary>To_comment</summary>
+  
   * PersonID (FK)
   * PostID (FK)
   * CommentID
@@ -111,6 +123,7 @@ The 5 main  tables are:
 
 <details>
   <summary>To_like</summary>
+  
   * PersonID (FK)
   * PostID (FK)
   * LikeDate
@@ -119,6 +132,7 @@ The 5 main  tables are:
 
 <details>
   <summary>To_follow</summary>
+  
   * FollowerID (FK)
   * FollowedID (FK)
   * FollowershipID
@@ -128,6 +142,7 @@ The 5 main  tables are:
 
 <details>
   <summary>To_participate_event</summary>
+  
   * EventID (FK)
   * PersonID (FK)
   * ParticipationID
@@ -135,6 +150,7 @@ The 5 main  tables are:
 
 <details>
   <summary>To_participate_poll</summary>
+  
   * PollID (FK)
   * PersonID (FK)
   * ParticipateDate
@@ -143,6 +159,7 @@ The 5 main  tables are:
 
 <details>
   <summary>To_share</summary>
+  
   * PostID (FK)
   * PersonID (FK)
   * IP
@@ -167,4 +184,4 @@ and then you will face a chart that is there to guide you!
  
 Note that the commands start with `S` indicate systematic (or aggregation commands) while commands start with `P` are mostly related to a **single** person or post.
 
-![ER](./Er.png)
+<img src=./ER.png>
